@@ -1,0 +1,93 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  overflow: hidden;
+}
+a:hover {
+  color: #1e293b !important;
+}
+
+.custom-dark {
+  color: #7895b2;
+}
+
+.custom-slate {
+  background-color: #1e293b;
+}
+
+.border-slate {
+  border: 1px solid #1e293b;
+}
+
+.custom-light {
+  color: #e8dfca;
+}
+
+.custom-orange {
+  color: #fd841f;
+}
+
+.bg-custom-dark {
+  background-color: #7895b2;
+}
+
+.bg-custom-light {
+  background-color: #e8dfca;
+}
+.bg-custom-orange {
+  background-color: #fd841f;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #e8dfca;
+}
+.active {
+  color: #e8dfca;
+}
+
+.custom-border-light-2 {
+  border: 2px solid #e8dfca;
+}
+
+.custom-border-blue-2 {
+  border: 1px solid #171d64;
+}
+
+/* Image styles */
+.saturate {
+  filter: saturate(3);
+}
+.grayscale {
+  filter: grayscale(100%);
+}
+.contrast {
+  filter: contrast(160%);
+}
+.brightness {
+  filter: brightness(0.25);
+}
+.blur {
+  filter: blur(3px);
+}
+.invert {
+  filter: invert(100%);
+}
+.sepia {
+  filter: sepia(100%);
+}
+.huerotate {
+  filter: hue-rotate(180deg);
+}
+.rss.opacity {
+  filter: opacity(50%);
+}
+
+/* 
+Google */
