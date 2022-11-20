@@ -115,8 +115,12 @@ header {
     </div>
 </section>
 
-<?php include('includes/footer.php') ?>
 
+<script src="lib/js/jquery-1.12.4.min.js"></script>
+<script src="lib/js/owl.carousel.min.js"></script>
+<script src="lib/js/jquery.toast.js"></script>
+<script src="lib/js/sweetalert2.all.min.js"></script>
+<script src="lib/js/bootstrap.min.js"></script>
 
 
 <script>

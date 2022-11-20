@@ -4,9 +4,6 @@
   box-sizing: border-box;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-a:hover {
-  color: #1e293b !important;
-}
 
 .custom-dark {
   color: #7895b2;

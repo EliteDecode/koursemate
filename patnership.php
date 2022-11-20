@@ -23,7 +23,7 @@ input {
         <div class="row ">
             <div class="col-lg-8 col-md-8 col-sm-12 mb-5 mt-3">
                 <div class='p-2 bg-orange-100 my-2 rounded-md'>
-                    <h3 class="mb-3 font-semibold">JOIN OUR TEAM, BECOME OUR PARTNER IN YOUR SCHOOL</h3>
+                    <h3 class="mb-3 font-semibold">JOIN OUR TEAM, BECOME A CONTRIBUTOR IN YOUR SCHOOL</h3>
                     <p>Fill the form below ( <span style='color:red'>*</span> )</p>
                 </div>
                 <div class=" rounded-md shadow-lg p-4 sm:p-5 bg-white">

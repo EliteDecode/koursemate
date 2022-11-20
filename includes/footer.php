@@ -1,3 +1,83 @@
+<!--footer-->
+<section class="footer mt-5 py-5" style="background-color: #fafafa">
+    <div class="container_index">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="p-2">
+                    <div class="footer-logo mt-4">
+
+                        <a href="index.php"> <img src="assets/logo.png" alt=""></a>
+
+                        <p class="text-xs sm:text-xs font-semibold opacity-75 mt-2">
+                            With innovative research projects and state of the art published works, koursemate is the
+                            leading firm for breaking complexity in research projects
+                        </p>
+                    </div>
+                    <div class="my-5">
+                        <h1 class="= font-semibold text-sm sm:text-sm text-gray-600">
+                            Find us on
+                        </h1>
+                        <div class="flex footer-icons items-center space-x-2 mt-2">
+                            <img src="assets/icons/facebook (1).png" alt="" />
+                            <img src="assets/icons/instagram.png" alt="" />
+                            <img src="assets/icons/youtube.png" alt="" />
+                            <img src="assets/icons/twitter (2).png" alt="" />
+                            <img src="assets/icons/linkedin (1).png" alt="" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="p-2">
+                    <h1 class="font-bold text-md sm:text-md">Support</h1>
+                    <ul class="footer-products">
+                        <li><a href="">Help Center</a></li>
+                        <li><a href="">Daily reviews</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Video Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="p-2">
+                    <h1 class="font-bold text-md sm:text-md">Contact</h1>
+                    <ul class="footer-products">
+                        <li><a href="">+234-90-1070-203</a></li>
+                        <li><a href="">partnership@stormgain.com </a></li>
+                        <li><a href="">careers@stormgain.com s</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="p-2">
+                    <h1 class="font-bold text-md sm:text-md">Learn</h1>
+                    <ul class="footer-products">
+                        <li><a href="">Easy start</a></li>
+                        <li><a href="">How to search your project topics</a></li>
+                        <li><a href="">How to make payment </a></li>
+                        <li><a href="">How to hire a writter</a></li>
+                        <li><a href="">How to become a contributor</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="p-2">
+                    <h1 class="font-bold text-md sm:text-md">Company</h1>
+                    <ul class="footer-products">
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Hire a writter</a></li>
+                        <li><a href="">Become a contributor</a></li>
+                        <li><a href="">Refer a friend</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer -->
+
+
 <!--Javascript libraries-->
 <!-- Subscribe Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -62,7 +142,7 @@
 <script src="lib/js/jquery.toast.js"></script>
 <script src="lib/js/sweetalert2.all.min.js"></script>
 <script src="lib/js/bootstrap.min.js"></script>
-<script src="styles/js/main.js"></script>
+
 
 
 
@@ -341,6 +421,18 @@ class Storage {
 
 
 }
+
+
+
+var controller = document.getElementById("controller");
+var mobile_nav = document.getElementById("mobile_nav");
+var main = document.getElementById("main-head");
+
+controller.addEventListener("click", (e) => {
+    mobile_nav.classList.toggle("toggleNav");
+    main.classList.toggle('stick');
+
+});
 </script>
 
 

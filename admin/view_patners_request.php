@@ -85,6 +85,10 @@ if (!isset($_SESSION['admin'])) {
                                     <?php else:  ?>
                                     <?php endif; ?>
                                     <input type="text" hidden id='request_id' value='<?php echo $id ?>'>
+                                    <input type="text" hidden id='name' value='<?php echo $name?>'>
+
+                                    <input type="text" hidden id='email' value='<?php echo $email?>'>
+
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="col-lg-12 col-md-12">
@@ -99,17 +103,21 @@ if (!isset($_SESSION['admin'])) {
                                         </div>
                                     </div>
                                     <?php if ($result['Status'] === 1):  ?>
-                                    <button class="btn w-100 bg-red-600 text-white mt-2" onclick='decline()'>Decline
+                                    <button class="btn w-100 bg-red-600 text-white mt-2" onclick='decline()'
+                                        id='decline-btn'>Decline
                                         Request</button>
                                     <?php elseif($result['Status'] === 0): ?>
                                     <div class="flex items-center justify-between">
-                                        <button class="btn  bg-green-600 text-white mt-2" onclick='Approve()'>Approve
+                                        <button class="btn  bg-green-600 text-white mt-2" id='accept-btn'
+                                            onclick='Approve()'>Approve
                                             Request</button>
-                                        <button class="btn  bg-red-600 text-white mt-2" onclick='decline()'>Decline
+                                        <button class="btn  bg-red-600 text-white mt-2" id='decline-btn'
+                                            onclick='decline()'>Decline
                                             Request</button>
                                     </div>
                                     <?php elseif($result['Status'] === -1): ?>
-                                    <button class="btn w-100 bg-green-600 text-white mt-2" onclick='Approve()'>Approve
+                                    <button class="btn w-100 bg-green-600 text-white mt-2" id='accept-btn'
+                                        onclick='Approve()'>Approve
                                         Request</button>
                                     <?php endif; ?>
 
@@ -133,9 +141,11 @@ if (!isset($_SESSION['admin'])) {
 
     <script>
     function decline() {
-        console.log('hello')
+        var btn = $('#decline-btn')
         var request_id = $('#request_id').val();
         var feedback = $('#feedback').val();
+        var name = $('#name').val();
+        var email = $('#email').val();
 
         if (feedback == "") {
             $("#feedback").removeClass('form-control').addClass('form-control is-invalid');
@@ -157,17 +167,20 @@ if (!isset($_SESSION['admin'])) {
             }).then((result) => {
                 /* Read more about isConfirmed, isDenied below */
                 if (result.isConfirmed) {
+                    btn.html('Please wait...')
                     $.ajax({
                         url: 'ajax_controls/admin_decline_request_patner.php',
                         method: 'post',
                         data: {
                             id: request_id,
                             feedback: feedback,
+                            name: name,
+                            email: email,
                         },
                         success: function(data) {
                             console.log(data)
+                            btn.html('Decline Request')
                             if (data == 'success') {
-
                                 Swal.fire({
                                     icon: 'success',
                                     title: 'Congratulations',
@@ -207,9 +220,11 @@ if (!isset($_SESSION['admin'])) {
 
 
     function Approve() {
-        console.log('hello')
+        var btn = $('#decline-btn')
         var request_id = $('#request_id').val();
         var feedback = $('#feedback').val();
+        var name = $('#name').val();
+        var email = $('#email').val();
 
         if (feedback == "") {
             $("#feedback").removeClass('form-control').addClass('form-control is-invalid');
@@ -229,23 +244,28 @@ if (!isset($_SESSION['admin'])) {
                 confirmButtonText: 'Approve',
 
             }).then((result) => {
-                /* Read more about isConfirmed, isDenied below */
                 if (result.isConfirmed) {
+                    /* Read more about isConfirmed, isDenied below */
+
+                    btn.html('Please wait...')
                     $.ajax({
                         url: 'ajax_controls/admin_approve_request_patner.php',
                         method: 'post',
                         data: {
                             id: request_id,
                             feedback: feedback,
+                            name: name,
+                            email: email
                         },
                         success: function(data) {
+                            btn.html('Approve Request')
                             console.log(data)
                             if (data == 'success') {
 
                                 Swal.fire({
                                     icon: 'success',
                                     title: 'Congratulations',
-                                    text: 'This request has been approved Successfully',
+                                    text: 'This request has been approved successfully',
                                     showClass: {
                                         popup: 'animate__animated animate__fadeInDown'
                                     },

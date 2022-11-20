@@ -11,10 +11,6 @@ Header start */
   border: 1px solid rgb(242, 242, 242);
 }
 
-li a {
-  font-weight: 600;
-}
-
 .main {
   background: url("../../assets/bg4.png");
   background-position: -600px 0px;

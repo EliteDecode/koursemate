@@ -11,6 +11,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/logo.png" type="image/x-icon">
 
     <!--Boostrap library-->
     <link rel="stylesheet" href="lib/css/bootstrap.min.css" />
@@ -53,7 +54,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
     </style>
 </head>
 
-<body>
+<body id='main-head'>
     <!--header-->
     <div class="header bg-white" style='position:sticky; top: 0%; z-index:10;'>
         <div class="minibar py-2 w-full">
@@ -82,12 +83,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
 
                         </button>
                     </a>
-                    <a href="">
-                        <button
-                            class="btn p-1 text-gray-200 border rounded-md bg-orange-600 text-xs hover:bg-white hover:text-orange-600">
-                            Subscribe
-                        </button>
-                    </a>
+
 
 
 

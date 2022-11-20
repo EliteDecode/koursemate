@@ -165,7 +165,7 @@ function selectDistinctPage($table, $term, $start, $limit){
 function selectPageCondition($table, $start, $limit){
 
   global $conn; 
-  $sql = "SELECT * FROM `$table` WHERE Publish = 'yes' ORDER BY DateReg DESC LIMIT $start, $limit ";   
+  $sql = "SELECT * FROM `$table` WHERE Status = '1' ORDER BY DateReg DESC LIMIT $start, $limit ";   
   
 
         // //preparing a prepared statement
@@ -213,6 +213,24 @@ function selectPageConditionRand($table, $start, $limit){
           mysqli_stmt_close($stmt);
   
 }
+//all details condition
+function selectPageConditionRandBlog($table, $start, $limit){
+
+  global $conn; 
+  $sql = "SELECT * FROM `$table` WHERE Publish = 'yes' ORDER BY RAND() DESC LIMIT $start, $limit ";   
+  
+
+        // //preparing a prepared statement
+          $stmt = mysqli_stmt_init($conn);
+          mysqli_stmt_prepare($stmt, $sql);
+          mysqli_stmt_execute($stmt);
+          $result = $stmt ->get_result();
+          $records = $result->fetch_all(MYSQLI_ASSOC);
+          return $records;
+          mysqli_stmt_close($stmt);
+  
+}
+
 
 //all details condition
 function selectPageConditionRandFilter($table,$id, $start, $limit){
@@ -328,6 +346,31 @@ function update($table,$id, $data){
     $stmt = executeQuery($sql,$data);
 
     return $stmt -> affected_rows;
+
+}
+
+// 4. A function to Update
+function updateTransaction($table,$id, $data){
+
+  global $conn;
+  $sql = "UPDATE `$table` SET ";
+  $i = 0;
+  foreach ($data as $key => $value) {
+    if ($i===0) {
+       $sql = $sql . " $key =?";
+    }else{
+        $sql = $sql . ", $key = ?";
+    }
+    $i++;
+  }
+
+
+
+  $sql = $sql . " WHERE Transaction_id=? ";
+  $data['id'] = $id;
+  $stmt = executeQuery($sql,$data);
+
+  return $stmt -> affected_rows;
 
 }
 

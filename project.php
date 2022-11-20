@@ -27,7 +27,7 @@ if (isset($_GET['filter']) && isset($_GET['term'])) {
 }
 
 .card img {
-    height: 190px;
+    height: 210px;
     filter: brightness(0.85);
 }
 
@@ -106,7 +106,7 @@ if (isset($_GET['filter']) && isset($_GET['term'])) {
 <section class="">
 
 
-    <div class=" py-3 border">
+    <div class=" py-3 ">
         <div class="container">
             <div class="actions flex space-x-2 justify-center items-center my-5">
                 <select name="" id="filter" class="filter border rounded-md custom-slate text-white"
@@ -172,7 +172,7 @@ if (isset($_GET['filter']) && isset($_GET['term'])) {
                     <div class="row">
                         <?php foreach ($courses as $course):  ?>
                         <div class="col-lg-2 col-md-2 col-sm-6 col-6  mb-3">
-                            <div class="card p-3">
+                            <div class="card sm:p-3 p-0">
                                 <img src="admin/files/<?php echo $course['Photo'] ?>" class="card-img" alt="...">
                                 <div class="p-2">
                                     <h5 class="text-sm font-bold text-black my-2" style='text-transform:lowercase'>
@@ -206,7 +206,7 @@ if (isset($_GET['filter']) && isset($_GET['term'])) {
                     <div class="row">
                         <?php foreach ($courses as $course):  ?>
                         <div class="col-lg-2 col-md-2 col-sm-6 col-6  mb-3">
-                            <div class="card p-3">
+                            <div class="card sm:p-3 p-0">
                                 <img src="admin/files/<?php echo $course['Photo'] ?>" class="card-img" alt="...">
                                 <div class="p-2">
                                     <h5 class="text-sm font-bold text-black my-2" style='text-transform:lowercase'>
@@ -238,7 +238,7 @@ if (isset($_GET['filter']) && isset($_GET['term'])) {
                     <div class="row">
                         <?php foreach ($courses as $course):  ?>
                         <div class="col-lg-2 col-md-2 col-sm-6 col-6  mb-3">
-                            <div class="card p-3">
+                            <div class="card sm:p-3 p-0">
                                 <img src="admin/files/<?php echo $course['Photo'] ?>" class="card-img" alt="...">
                                 <div class="p-2">
                                     <h5 class="text-sm font-bold text-black my-2" style='text-transform:lowercase'>

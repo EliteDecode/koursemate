@@ -1,4 +1,5 @@
 <?php  
+session_start();
 /* Getting the current page name and storing it in a variable. */
 $activePage = basename($_SERVER['PHP_SELF'], ".php");
 
@@ -11,6 +12,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/logo.png" type="image/x-icon">
 
     <!--Boostrap library-->
     <link rel="stylesheet" href="lib/css/bootstrap.min.css" />
@@ -27,13 +29,50 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
     <link rel="stylesheet" href="styles/css/global.css" />
     <!--Css-->
     <link rel="stylesheet" href="styles/css/index.css" />
-    <link rel="stylesheet" href="lib/css/jquery.toast.css">
 
 
     <title>Koursemate Projects</title>
 
 
     <style>
+    .footer-logo img {
+        width: 60%;
+    }
+
+    .container_index {
+        width: 80%;
+        margin: auto;
+    }
+
+
+    .footer-icons {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid #f2f3f4;
+    }
+
+    .apps-footer img {
+        width: 35%;
+    }
+
+
+
+    .footer-products li {
+        font-weight: 500;
+        font-size: 13px;
+        margin-top: 2%;
+        opacity: 0.8;
+    }
+
+    .logo img {
+        width: 35%;
+    }
+
+    .logo {
+        width: 30%;
+    }
+
     .active {
         border-bottom: 4px solid #fd841f;
     }
@@ -52,39 +91,24 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
         top: 0%;
     }
 
-    .not-found {
-        width: 12%;
-    }
-
-
-    .chat {
-        position: fixed;
-        bottom: 50px;
-        right: 50px;
-        z-index: 111111;
-        width: 55px;
-    }
-
     @media (min-width: 0px) and (max-width: 575px) {
+        .logo img {
+            width: 100% !important;
+        }
 
+        .logo {
+            width: 35% !important;
+        }
 
-        .chat {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 111111;
-            width: 50px;
+        .container_index {
+            width: 90%;
+            margin: auto;
         }
     }
     </style>
 </head>
 
 <body>
-
-
-    <div>
-        <a href="https://wa.link/2sole0"> <img src="assets/whatsapp.png" alt="" class='chat'></a>
-    </div>
     <!--header-->
     <div class="header bg-white" style='position:sticky; top: 0%; z-index:10;'>
         <div class="minibar py-2 w-full">
@@ -127,11 +151,9 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
             </div>
         </div>
         <div class="container">
-            <div class="flex items-center justify-between py-4">
+            <div class="flex items-center justify-between py-4" style='position:sticky; top: 0%'>
                 <div class="logo">
-                    <h2 class="font-semibold text-2xl custom-dark">
-                        Kourse<span class="custom-orange">Mate.</span>
-                    </h2>
+                    <a href="index.php"> <img src="assets/logo.png" alt=""></a>
                 </div>
 
                 <div class="nav__links">
@@ -180,7 +202,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
                             </a>
                         </li>
                         <li class=" " style="list-style: none">
-                            <a href="https://wa.link/2sole0" style="text-decoration: none"
+                            <a href="contact.php" style="text-decoration: none"
                                 class="<?= ($activePage == 'contact') ? 'active':''; ?> flex items-center space-x-1">
                                 <img src="assets/phone-call.png" alt="" width="15px" />
                                 <span class="text-sm">Contact us</span>
@@ -197,10 +219,8 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
 
         <div class="mobile__links bg-white py-5 h-screen"
             style="position: absolute; top: 0%; width: 75%; z-index:111111" id="mobile_nav">
-            <div class="logo px-4 py-2 mb-3">
-                <h2 class="font-semibold text-2xl custom-dark">
-                    Kourse<span class="custom-orange">Mate.</span>
-                </h2>
+            <div class="logo ml-4 mb-3">
+                <a href="index.php"> <img src="assets/logo.png" alt=""></a>
             </div>
             <ul class="flex flex-col p-3 space-y-8">
                 <li class=" " style="list-style: none">
@@ -247,7 +267,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
                     </a>
                 </li>
                 <li class=" " style="list-style: none">
-                    <a href="https://wa.link/2sole0" style="text-decoration: none"
+                    <a href="contact.php" style="text-decoration: none"
                         class="<?= ($activePage == 'contact') ? 'activeMob':''; ?> flex items-center space-x-1">
                         <img src="assets/phone-call.png" alt="" width="15px" />
                         <span class="text-sm">Contact us</span>

@@ -77,6 +77,7 @@ a:hover {
     margin: 3%;
     position: absolute;
     z-index: 2;
+    right: 0%;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -96,7 +97,7 @@ a:hover {
 
     .sidenav ul {
         text-align: center;
-        margin-top: 20% !important;
+        margin-top: 0% !important;
         padding-top: 0% !important;
     }
 
@@ -119,6 +120,11 @@ a:hover {
                 <img src="../assets/icons/speedometer.png" class='cursor-pointer' alt="" style="width: 20px;">
                 <span>Dashboard
                 </span>
+            </a>
+            <a href="transactions.php" style="color: #181818;  text-decoration:none"
+                class="flex space-x-2 items-center <?= ($activePage == 'transactions') ? 'active':''; ?>">
+                <img src="../assets/icons/lending.png" class='cursor-pointer' alt="" style="width: 20px;">
+                <span>Transactions</span>
             </a>
             <a href="profile.php" style="color: #181818;  text-decoration:none"
                 class="<?= ($activePage == 'profile') ? 'active':''; ?> flex space-x-2  items-center">
@@ -205,6 +211,8 @@ a:hover {
                 <img src="../assets/icons/blog.png" class='cursor-pointer' alt="" style="width: 20px;">
                 <span>Manage Blog</span>
             </a>
+
+
 
             <a href="settings.php" style="color: #181818;  text-decoration:none"
                 class="<?= ($activePage == 'settings') ? 'active':''; ?> flex space-x-2  items-center">

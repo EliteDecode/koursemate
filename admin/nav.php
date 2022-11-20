@@ -187,32 +187,15 @@
 
 
     <!--===================Navigation Section for Mobile=========================-->
-    <nav class="navbar flex flex-row justify-between items-center py-8 "
+    <nav class="navbar flex flex-row justify-between  py-8 "
         style="border-bottom: 1px solid #f0efed;position:sticky; top:0%; background-color:#fff">
-        <a href='dashboard.php' class=" logo" style='text-decoration:none'>
+        <a href='dashboard.php' class="" style='text-decoration:none'>
             <div class="logo">
-                <h2 class="font-semibold text-2xl custom-dark">
-                    Kourse<span class="custom-orange">Mate.
-                </h2>
+                <div class="">
+                    <a href="index.php"> <img src="../assets/logo.png" width='40%' alt=""></a>
+                </div>
             </div>
         </a>
-        <div class="nav-links">
-            <ul class="flex space-x-4">
-                <li class="flex space-x-1 items-center">
-                    <img src="../assets/icons/admin.png " alt="" srcset="">
-                    <span class="font-bold text-sm capitalize"> <?php echo $admin ?> </span>
-                </li>
-                <li>
-                    <a href="../index.php"> <img src="../assets/icons/house.png" alt="" style="width: 30px;"></a>
-                </li>
-                <li class="post_link space-x-1" style='display:flex; flex-direction:row; align-items:center'>
-                    <a href="logout.php"> <img src="../assets/icons/shutdown.png" class='cursor-pointer' alt=""
-                            style="width: 30px;">
-                    </a>
-                </li>
-            </ul>
-        </div>
-
 
     </nav>
 
