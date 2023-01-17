@@ -9,7 +9,7 @@ if (!isset($_SESSION['admin'])) {
  }
 
 
- $posts = selectAll('transactions');
+ $posts = selectAll2('transactions');
 
 ?>
 

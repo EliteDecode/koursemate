@@ -15,7 +15,7 @@ if (!isset($_SESSION['admin'])) {
  $posts;
 
  if($status == 1){
-     $posts = selectAll('courses');
+     $posts = selectAll2('courses');
  }else{
     $posts = selectAll('courses' ,['Authur' => $name]);
  }

@@ -11,7 +11,6 @@ $level = $_POST['level'];
 $format = $_POST['format'];
 
 
-
     
 $emailExists = selectAll('writters', ['Email' => $email, 'Project' => $project]);
 $num = count($emailExists);

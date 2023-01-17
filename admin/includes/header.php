@@ -9,6 +9,7 @@
     <!-- Boostrap and Tailwind css Library Link-->
     <link rel="stylesheet" href="../lib/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../lib/css/tailwind.min.css" />
+    <link rel="icon" href="../assets/logoK.png" type="image/x-icon">
 
     <!--Font Awesome-->
     <link rel="stylesheet" href="../lib/fonts/css/all.css" />

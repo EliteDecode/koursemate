@@ -46,7 +46,7 @@ function selectAll($table, $conditions=[]){
         if ($i===0) {
            $sql = $sql . " WHERE $key =?";
         }else{
-            $sql = $sql . " AND $key = ?";
+            $sql = $sql . " AND $key = ? ";
         }
         $i++;
       }
@@ -56,6 +56,27 @@ function selectAll($table, $conditions=[]){
       return $result;
      
     } 
+}
+
+function selectAll2($table, $conditions=[]){
+
+  global $conn; 
+  $sql = "SELECT * FROM `$table` ORDER BY DateReg DESC ";   
+
+        // //preparing a prepared statement
+          $stmt = mysqli_stmt_init($conn);
+          mysqli_stmt_prepare($stmt, $sql);
+          mysqli_stmt_execute($stmt);
+          $result = $stmt ->get_result();
+          $records = $result->fetch_all(MYSQLI_ASSOC);
+          return $records;
+          mysqli_stmt_close($stmt);
+ 
+    $stmt = executeQuery($sql, $conditions);
+    $result = $stmt ->get_result()->fetch_all(MYSQLI_ASSOC);
+    return $result;
+   
+  
 }
 
 

@@ -10,7 +10,7 @@ $gender = $_POST['gender'];
 $image = $_FILES['image']['name'];
 $image_tmp = $_FILES['image']['tmp_name'];
 
-$folder = '../images/post_images'  ;
+$folder = '../assets/'  ;
 
 $valid_extensions = array('jpeg', 'jpg', 'png'); // valid extensions
 

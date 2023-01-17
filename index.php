@@ -1,4 +1,4 @@
-<?php include('includes/header_index.php');
+<?php include('includes/header.php');
 include('admin/includes/database/db_controllers.php');
 
 if(isset($_SESSION['users'])){
@@ -54,7 +54,7 @@ $reviews = selectAll('feedback', 0 , 6);
     background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: overlay;
     height: 105vh;
-    margin-top: -10%;
+    margin-top: 0%;
 }
 
 li a {
@@ -412,7 +412,9 @@ li a {
 
             <?php endforeach ?>
         </div>
-        <button class="btn bg-orange-600 text-orange-600 bg-white border-orange-600">VISIT BLOG</button>
+        <a href="blog.php">
+            <button class="btn bg-orange-600 text-orange-600 bg-white border-orange-600">VISIT BLOG</button>
+        </a>
         <!--end of cards-->
     </div>
 </div>

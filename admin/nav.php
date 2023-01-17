@@ -57,11 +57,7 @@
         display: none !important;
     }
 
-    .navbar .logo {
 
-        margin-left: 3%;
-        text-decoration: none !important;
-    }
 
     @media(max-width: 767px) {
         .navbar-desk {
@@ -149,6 +145,19 @@
         margin-left: -87px;
         padding: 1px 80px 1px 15px;
     }
+
+    .logo img {
+        width: 15%;
+    }
+
+
+
+    @media (min-width: 0px) and (max-width: 575px) {
+        .logo img {
+            width: 40% !important;
+        }
+
+    }
     </style>
 </head>
 
@@ -160,9 +169,7 @@
         <div class="container">
             <a href='dashboard.php' class="logo" style='text-decoration:none'>
                 <div class="logo">
-                    <h2 class="font-semibold text-2xl custom-dark">
-                        Kourse<span class="custom-orange">Mate.</span>
-                    </h2>
+                    <a href="../index.php"> <img src="../assets/logo.png" alt=""></a>
                 </div>
             </a>
             <div class="nav-links">

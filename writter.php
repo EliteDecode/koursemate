@@ -194,6 +194,7 @@ function registerWritter() {
         $('#add_btn').html('Please Wait....');
         var formData = new FormData(document.getElementById('post_form'));
 
+
         fetch('admin/ajax_controls/register_writter.php', {
                 method: 'POST',
                 body: formData
@@ -203,7 +204,7 @@ function registerWritter() {
             })
             .then(function(text) {
                 $('#add_btn').html('Submit form')
-
+                console.log(text)
                 if (text == 'success') {
                     Swal.fire({
                         icon: 'success',
@@ -216,7 +217,7 @@ function registerWritter() {
                             popup: 'animate__animated animate__fadeOutUp'
                         }
                     }).then(function() {
-                        window.location = "writter.php";
+                        // window.location = "writter.php";
                     });
                 } else if (text == 'pending') {
 

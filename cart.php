@@ -80,7 +80,8 @@ header {
 
                     <div class="total flex items-center justify-between mt-4">
                         <h3 class="font-bold text-md mb-1 ">Total <span class='check_count'></span></h3>
-                        <div>$ <span class='check_amount'></span></div>
+                        <div class='flex items-center space-x-2'> <i class="fa fa-naira-sign"></i> <span
+                                class='check_amount'></span></div>
                     </div>
 
                     <div class="flex items-center justify-center">

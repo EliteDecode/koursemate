@@ -132,7 +132,7 @@ label {
 
 
                         <div class="flex justify-center mb-4">
-                            <button class="btn bg-custom-blue py-2  text-white w-64  flex justify-center font-bold mt-4"
+                            <button class="btn bg-orange-500 py-2  text-white w-64  flex justify-center font-bold mt-4"
                                 type="submit" onclick="add_post()" id="add_btn">
                                 &nbsp ADD ADMIN
                                 &nbsp</button>
@@ -251,13 +251,14 @@ label {
                     return response.text();
                 })
                 .then(function(text) {
-                    $('#add_btn').html('ADD POST')
+                    $('#add_btn').html('ADD ADMIN')
+                    console.log(text)
                     if (text == 'success') {
 
                         Swal.fire({
                             icon: 'success',
                             title: 'Congratulations',
-                            text: 'Your Post has been Added',
+                            text: 'Your Admin been Added',
                             showClass: {
                                 popup: 'animate__animated animate__fadeInDown'
                             },

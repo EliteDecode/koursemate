@@ -164,7 +164,7 @@ li.ui-tabs-active a {
                                     </div>
 
                                 </form>
-                                <button type='submit' id='submit' class='btn bg-custom-red text-white font-semibold'
+                                <button type='submit' id='submit' class='btn bg-orange-500 text-white font-semibold'
                                     onclick='update_password() '>
                                     &nbsp Update &nbsp</button>
                             </div>

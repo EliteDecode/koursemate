@@ -11,7 +11,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="icon" href="assets/logoK.png" type="image/x-icon">
 
     <!--Boostrap library-->
     <link rel="stylesheet" href="lib/css/bootstrap.min.css" />

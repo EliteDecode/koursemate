@@ -220,7 +220,7 @@ if (!isset($_SESSION['admin'])) {
 
 
     function Approve() {
-        var btn = $('#decline-btn')
+        var btnA = $('#accept-btn')
         var request_id = $('#request_id').val();
         var feedback = $('#feedback').val();
         var name = $('#name').val();
@@ -247,7 +247,7 @@ if (!isset($_SESSION['admin'])) {
                 if (result.isConfirmed) {
                     /* Read more about isConfirmed, isDenied below */
 
-                    btn.html('Please wait...')
+                    btnA.html('Please wait...')
                     $.ajax({
                         url: 'ajax_controls/admin_approve_request_patner.php',
                         method: 'post',

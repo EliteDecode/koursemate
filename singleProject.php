@@ -117,10 +117,13 @@ if (isset($_GET['filter']) && isset($_GET['term'])){
                                             <img src="assets/icons/tag.png" alt="" width='22px'>
                                             <h5 class='text-md uppercase font-semibold '>Price of Project</h5>
                                         </div>
-                                        <h1 class='font-lighter text-gray-700 lead'
-                                            style='font-size:16px; line-height:1.5rem'>
-                                            $<?php echo number_format($post['Price']) ?>
-                                        </h1>
+                                        <div class="flex space-x-2 items-center">
+                                            <i class="fa fa-naira-sign"></i>
+                                            <h1 class='font-lighter text-gray-700 lead'
+                                                style='font-size:16px; line-height:1.5rem'>
+                                                <?php echo number_format($post['Price']) ?>
+                                            </h1>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -142,6 +145,16 @@ if (isset($_GET['filter']) && isset($_GET['term'])){
                                                 src="assets/icons/shopping-cart.png" alt="" width='20px'><span>Add
                                                 to
                                                 Cart</span></button>
+
+                                    </div>
+                                    <div>
+                                        <a href="cart.php">
+
+                                            <button class="bg-teal-600 text-white p-2 mt-2 font-bold uppercase justify-center text-md btn w-100 
+                             flex items-center space-x-2"><img src="assets/icons/shopping-cart.png" alt=""
+                                                    width='20px'><span>View
+                                                    Cart</span></button>
+                                        </a>
 
                                     </div>
 

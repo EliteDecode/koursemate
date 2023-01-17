@@ -12,7 +12,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="icon" href="assets/logoK.png" type="image/x-icon">
 
     <!--Boostrap library-->
     <link rel="stylesheet" href="lib/css/bootstrap.min.css" />
@@ -65,13 +65,6 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
         opacity: 0.8;
     }
 
-    .logo img {
-        width: 35%;
-    }
-
-    .logo {
-        width: 30%;
-    }
 
     .active {
         border-bottom: 4px solid #fd841f;
@@ -89,6 +82,15 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
     header {
         position: sticky;
         top: 0%;
+    }
+
+
+    .logo img {
+        width: 35%;
+    }
+
+    .logo {
+        width: 30%;
     }
 
     @media (min-width: 0px) and (max-width: 575px) {
@@ -111,7 +113,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
 <body>
     <!--header-->
     <div class="header bg-white" style='position:sticky; top: 0%; z-index:10;'>
-        <div class="minibar py-2 w-full">
+        <div class="minibar py-1 w-full">
             <div class="container flex items-center justify-between">
                 <div class="flex items-center space-x-4">
                     <div class="flex items-center space-x-2">
@@ -151,7 +153,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
             </div>
         </div>
         <div class="container">
-            <div class="flex items-center justify-between py-4" style='position:sticky; top: 0%'>
+            <div class="flex items-center justify-between py-1" style='position:sticky; top: 0%'>
                 <div class="logo">
                     <a href="index.php"> <img src="assets/logo.png" alt=""></a>
                 </div>

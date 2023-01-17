@@ -155,7 +155,7 @@ label {
 
 
                         <div class="flex justify-center mb-4">
-                            <button class="btn bg-custom-blue py-2  text-white w-64  flex justify-center font-bold mt-4"
+                            <button class="btn bg-orange-500 py-2  text-white w-64  flex justify-center font-bold mt-4"
                                 type="submit" onclick="add_post()" id="add_btn">
                                 &nbsp UPDATE ADMIN
                                 &nbsp</button>

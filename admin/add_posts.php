@@ -9,7 +9,10 @@ if (!isset($_SESSION['admin'])) {
 
  $result = selectOne('admin', ['Email' => $admin]);
 
- $name = $result['Name']
+ $name = $result['Name'];
+ $status = $result['Status'];
+
+
  ?>
 
 <style>
@@ -137,6 +140,7 @@ label {
                                     </div>
                                 </div>
                             </div>
+                            <?php if($status === 1): ?>
                             <div class="col-lg-4 col-md-4 col-sm-12 ">
                                 <div class="form-group">
                                     <label for="publish">Publish Project</label>
@@ -151,6 +155,20 @@ label {
 
                                 </div>
                             </div>
+                            <?php else: ?>
+                            <div class="col-lg-4 col-md-4 col-sm-12 ">
+                                <div class="form-group">
+                                    <select name="publish" id="publish" class='form-control' hidden>
+                                        <option value="">Select a choice</option>
+                                        <option value="1">Yes, Do publish </option>
+                                        <option value="0" selected>No, Later</option>
+                                    </select>
+                                    <div class="invalid-feedback error-publish">
+                                        Will you miss me? my love???
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endif; ?>
                         </div>
 
                         <div class="form-group">
