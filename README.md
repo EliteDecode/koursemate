@@ -6,10 +6,10 @@ KourseMate is a research-project marketplace for students. It helps undergraduat
 
 Final-year and postgraduate students spend weeks searching for reliable research materials and guidance. KourseMate brings that into one place:
 
-- **Find research projects fast** â€” a searchable library of project topics and materials ("your research projects right in front of you").
-- **Buy materials online** â€” students add materials to a cart and pay online, then download what they purchased.
-- **Get expert help** â€” students with a complex research project can request help from KourseMate's team.
-- **Partner with KourseMate** â€” writers and institutions can apply to become partners and contribute content.
+- **Find research projects fast** — a searchable library of project topics and materials ("your research projects right in front of you").
+- **Buy materials online** — students add materials to a cart and pay online, then download what they purchased.
+- **Get expert help** — students with a complex research project can request help from KourseMate's team.
+- **Partner with KourseMate** — writers and institutions can apply to become partners and contribute content.
 
 Revenue comes from paid project materials, research assistance and partnerships.
 
